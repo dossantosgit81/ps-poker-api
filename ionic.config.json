@@ -1,0 +1,7 @@
+{
+  "name": "ps-poker-api",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
