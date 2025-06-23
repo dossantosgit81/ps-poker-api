@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { IonHeader, 
   IonToolbar, 
   IonTitle, 
@@ -12,6 +12,7 @@ import { IonHeader,
   IonRow,
   IonButton,
   IonCol } from '@ionic/angular/standalone';
+  import { PokemonsService } from '../services/pokemons.service';
 
 @Component({
   selector: 'app-home',
@@ -32,5 +33,13 @@ import { IonHeader,
     IonCardContent ],
 })
 export class HomePage {
-  constructor() {}
+ private pokemonsService = inject(PokemonsService);
+
+  ngOnInit(){
+  
+   this.pokemonsService.getPokemons().subscribe(res =>{
+    console.log(res)
+   });
+    console.log("hello");
+  }
 }
