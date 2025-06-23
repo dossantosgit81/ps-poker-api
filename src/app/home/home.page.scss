@@ -1,6 +1,6 @@
 #container {
   text-align: center;
-
+  width: 80%;
   position: absolute;
   left: 0;
   right: 0;
@@ -26,13 +26,15 @@
   text-decoration: none;
 }
 
-.flex{
+.content{
   display: flex;
   justify-content: center;
-  margin-top: 20px;
 }
 
-.card{
-  width: 100%;
-  max-width: 250px;
+.card-wrap{
+  padding: 4%;
+}
+
+.text-wrap{
+  text-align: center;
 }

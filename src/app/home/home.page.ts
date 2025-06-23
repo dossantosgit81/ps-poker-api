@@ -1,10 +1,4 @@
 import { Component } from '@angular/core';
-/*  <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-
-    <ion-card-content> */
 import { IonHeader, 
   IonToolbar, 
   IonTitle, 
@@ -16,6 +10,7 @@ import { IonHeader,
   IonCardContent,
   IonGrid,
   IonRow,
+  IonButton,
   IonCol } from '@ionic/angular/standalone';
 
 @Component({
@@ -33,6 +28,7 @@ import { IonHeader,
     IonRow,
     IonCol,
     IonCardSubtitle, 
+    IonButton,
     IonCardContent ],
 })
 export class HomePage {
