@@ -25,20 +25,15 @@ import { IonHeader,
     IonCard, 
     IonCardHeader, 
     IonCardTitle, 
-    IonGrid,
-    IonRow,
-    IonCol,
-    IonCardSubtitle, 
     IonButton,
-    IonCardContent ],
+     ],
 })
 export class HomePage {
  private pokemonsService = inject(PokemonsService);
-
+  pokemons: any[] = [];
   ngOnInit(){
-  
-   this.pokemonsService.getPokemons().subscribe(res =>{
-    console.log(res)
+    this.pokemonsService.getPokemons(0).subscribe(res =>{
+    this.pokemons = res.results;
    });
     console.log("hello");
   }

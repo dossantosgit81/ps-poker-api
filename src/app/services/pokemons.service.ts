@@ -6,10 +6,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PokemonsService {
-  private baseUrl = "https://pokeapi.co/api/v2/pokemon?limit=151&offset=0";
+  private baseUrl = "https://pokeapi.co/api/v2/pokemon";
   constructor(private http: HttpClient) { }
 
-  getPokemons(): Observable<any>{
-    return this.http.get(this.baseUrl);
+  getPokemons(page: number): Observable<any>{
+    const limit: number = 10;
+    let basePath: string = `?limit=${limit}&offset=${page}`
+    return this.http.get(this.baseUrl+basePath);
   }
 }
