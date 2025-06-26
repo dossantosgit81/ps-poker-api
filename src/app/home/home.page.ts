@@ -11,8 +11,10 @@ import { IonHeader,
   IonGrid,
   IonRow,
   IonButton,
+  IonRouterLink,
   IonCol } from '@ionic/angular/standalone';
   import { PokemonsService } from '../services/pokemons.service';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -26,6 +28,7 @@ import { IonHeader,
     IonCardHeader, 
     IonCardTitle, 
     IonButton,
+    RouterLink
      ],
 })
 export class HomePage {
