@@ -2,7 +2,9 @@
   @for(pokemon of pokemons; track pokemon.name){
   <div class="card-wrap">
     <ion-card class="card">
-      <img class="card-img" alt="Silhouette of mountains" />
+      <img class="card-img" 
+      alt="Silhouette of mountains" 
+      [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/' + getIdPokemon(pokemon.url) + '.png'"  />
       <ion-card-header>
         <ion-card-title>{{pokemon.name}}</ion-card-title>
       </ion-card-header>

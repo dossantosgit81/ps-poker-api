@@ -13,7 +13,7 @@ import { IonHeader,
   IonButton,
   IonRouterLink,
   IonCol } from '@ionic/angular/standalone';
-  import { PokemonsService } from '../services/pokemons.service';
+import { PokemonsService } from '../services/pokemons.service';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -37,5 +37,11 @@ export class HomePage {
     this.pokemons = res.results;
    });
   }
-
+  
+  getIdPokemon(url: string){
+    const parts = url.split("/");
+    const id = parts[parts.length - 2]; 
+    console.log(id); // "1"
+    return id;
+  }
 }

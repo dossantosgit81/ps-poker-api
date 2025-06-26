@@ -19,10 +19,8 @@ export class DetailsComponent  implements OnInit {
         console.log(res);
       });
     }
-   
   }
 
-  
   getIdPokemon(url: string){
     const parts = url.split("/");
     const id = parts[parts.length - 2]; 
