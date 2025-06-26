@@ -1,20 +1,12 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title>
-      Poke API
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content class="content">
   @for(pokemon of pokemons; track pokemon.name){
   <div class="card-wrap">
     <ion-card class="card">
-      <img class="card-img" alt="Silhouette of mountains" src="" />
+      <img class="card-img" alt="Silhouette of mountains" />
       <ion-card-header>
         <ion-card-title>{{pokemon.name}}</ion-card-title>
       </ion-card-header>
-      <a routerLink="/details">
+        <a  [routerLink]="['/details', pokemon.url]">
         <ion-button fill="clear">Detalhes</ion-button>
       </a>
     </ion-card>

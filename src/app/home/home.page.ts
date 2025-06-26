@@ -20,9 +20,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
-  imports: [IonHeader, 
-    IonToolbar, 
-    IonTitle, 
+  imports: [  
     IonContent, 
     IonCard, 
     IonCardHeader, 
@@ -38,6 +36,12 @@ export class HomePage {
     this.pokemonsService.getPokemons(0).subscribe(res =>{
     this.pokemons = res.results;
    });
-    console.log("hello");
+  }
+
+  getIdPokemon(url: string){
+    const parts = url.split("/");
+    const id = parts[parts.length - 2]; 
+    console.log(id); // "1"
+    return id;
   }
 }
