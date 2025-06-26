@@ -14,4 +14,8 @@ export class PokemonsService {
     let basePath: string = `?limit=${limit}&offset=${page}`
     return this.http.get(this.baseUrl+basePath);
   }
+
+    getPokemon(id: string): Observable<any>{
+      return this.http.get(`${this.baseUrl}/${id}`);
+  }
 }
