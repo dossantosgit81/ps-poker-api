@@ -8,13 +8,13 @@
       <ion-card-header>
         <ion-card-title>{{pokemon.name}}</ion-card-title>
       </ion-card-header>
-        <a  [routerLink]="['/details', pokemon.url]">
+        <a [routerLink]="['/details', pokemon.url]">
         <ion-button fill="clear">Detalhes</ion-button>
       </a>
     </ion-card>
   </div>
   }
   <div class="text-wrap">
-    <ion-button fill="clear">Mais</ion-button>
+    <ion-button (click)="loadMore()" fill="clear">Mais</ion-button>
   </div>
 </ion-content>

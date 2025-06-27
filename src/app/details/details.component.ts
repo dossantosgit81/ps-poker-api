@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonsService } from '../services/pokemons.service';
 import { 
-  IonContent, 
+  IonContent
  } from '@ionic/angular/standalone';
 
 @Component({

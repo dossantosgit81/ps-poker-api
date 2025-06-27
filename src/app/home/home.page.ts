@@ -32,9 +32,17 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 export class HomePage {
  private pokemonsService = inject(PokemonsService);
   pokemons: any[] = [];
+  page: number = 0;
   ngOnInit(){
-    this.pokemonsService.getPokemons(0).subscribe(res =>{
+    this.pokemonsService.getPokemons(this.page).subscribe(res =>{
     this.pokemons = res.results;
+   });
+  }
+
+  loadMore(){
+    this.page++;
+     this.pokemonsService.getPokemons(this.page).subscribe(res =>{
+     this.pokemons = res.results;
    });
   }
   
